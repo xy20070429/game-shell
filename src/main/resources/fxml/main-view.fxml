@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/fxml/1"
+      stylesheets="@../css/style.css"
+      spacing="20"
+      padding="32"
+      alignment="TOP_CENTER"
+      prefWidth="800"
+      prefHeight="600"
+      fx:controller="com.example.gameshell.controller.MainController">
+
+    <Label text="游戏空壳框架 · 第一阶段" styleClass="title"/>
+
+    <Label text="游戏内时间" styleClass="subtitle"/>
+    <Label fx:id="clockLabel" styleClass="clock"/>
+
+    <Label text="数据库自检结果" styleClass="subtitle"/>
+    <Label fx:id="dbStatusLabel" styleClass="status" wrapText="true" prefWidth="640"/>
+
+    <HBox spacing="16" alignment="CENTER">
+        <Button text="测试数据库连接" styleClass="primary-button" onAction="#onTestDb"/>
+        <Button fx:id="togglePauseBtn" text="暂停时间" onAction="#onTogglePause"/>
+    </HBox>
+
+</VBox>

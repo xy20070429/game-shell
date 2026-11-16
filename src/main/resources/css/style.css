@@ -1,0 +1,59 @@
+/* 主窗口基础样式 */
+.root {
+    -fx-font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    -fx-background-color: #f5f6f8;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2933;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #52606d;
+}
+
+.clock {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2563eb;
+    -fx-padding: 8 0;
+}
+
+.status {
+    -fx-font-size: 14px;
+    -fx-text-fill: #334155;
+    -fx-line-spacing: 6;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 16;
+    -fx-min-height: 90;
+}
+
+.primary-button {
+    -fx-font-size: 14px;
+    -fx-padding: 8 20;
+    -fx-background-color: #2563eb;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-padding: 8 20;
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #1f2933;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #cbd5e1;
+}

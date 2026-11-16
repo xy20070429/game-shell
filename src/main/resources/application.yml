@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: game-shell
+
+  # 桌面应用：不启动内嵌 Web 服务器，Spring 仅作为 Bean 容器与数据访问层
+  main:
+    web-application-type: none
+
+  # 数据源连接配置：按本机 MySQL 实际账号密码修改
+  datasource:
+    url: jdbc:mysql://localhost:3306/game_shell_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: GameShellHikariPool
+      maximum-pool-size: 10
+      connection-timeout: 5000
+
+  # 首次启动自动执行建表与初始化数据脚本；幂等设计，重复执行不会重复插入
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+      encoding: UTF-8
+
+# 应用自定义配置（后续阶段可扩展）
+game:
+  clock:
+    # 现实 1 秒对应游戏内推进的分钟数
+    minutes-per-real-second: 1
